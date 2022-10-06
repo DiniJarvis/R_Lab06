@@ -45,7 +45,7 @@ knapsack.dynamic <-function(x,W){
   }
   output <- list(
     value = round(mat[nrow(mat),ncol(mat)]),
-    elements = elements
+    elements = sort(elements, decreasing = FALSE)
   )
   return(output)
 }
