@@ -31,17 +31,16 @@ knapsack.dynamic <-function(x,W){
     }
   }
   
+  val=mat[nrow(mat),ncol(mat)]
   elements=c()
   k=nrow(x)+1
-  l=W+1
-  while (k>1 & l>1) {
-    if(mat[k,l] != mat[k-1,l]){
-      elements<-c(k-1,elements)
+  while (k>1) {
+    if(val %in% mat[k-1,]){
       k<-k-1
-      l<-l-1
     }else{
+      elements<-c(elements,k-1)
+      val=val-x$v[k-1]
       k<-k-1
-      
     }
   }
   output <- list(

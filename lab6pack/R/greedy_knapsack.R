@@ -27,14 +27,14 @@ greedy_knapsack <- function(x,W){
     tw <- tw + new_x$w[i]
     tv <- tv + new_x$v[i]
     if (tw <= W){
-      value = value + tw
+      value = value + tv
       elements <- c(elements,as.numeric(row.names(new_x)[i])) 
     }
     i=i+1
   }
   output <- list(
     value = round(value),
-    elements = elements
+    elements = sort(elements, decreasing = FALSE)
   )
   return(output)
 }
