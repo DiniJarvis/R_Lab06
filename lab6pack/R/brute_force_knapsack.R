@@ -1,3 +1,13 @@
+#' Knapsack problem using brute force knapsack algortihm
+#'
+#' @param x a data.frame with two variables v and w (values and weights)
+#' @param W size (Max weight capacity)
+#'
+#' @return the maximum values and elements to be carried by knapsack
+#' @examples brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
+#' @export
+#'
+
 brute_force_knapsack <- function(x,W){
   stopifnot(is.data.frame(x),
             is.numeric(W),
