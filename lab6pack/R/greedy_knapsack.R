@@ -21,9 +21,9 @@ greedy_knapsack <- function(x,W){
   elements<- c()
   value<-0
   tw <- 0
-  tv <- 0
   i = 1
   while(tw<=W){
+    tv<-0
     tw <- tw + new_x$w[i]
     tv <- tv + new_x$v[i]
     if (tw <= W){
