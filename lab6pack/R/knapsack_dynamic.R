@@ -9,7 +9,7 @@
 #' @export
 #'
 
-knapsack.dynamic <-function(x,W){
+knapsack_dynamic <-function(x,W){
   stopifnot(is.data.frame(x),
             is.numeric(W),
             W>0,
